@@ -1,0 +1,52 @@
+.mic-btn{
+
+    width:55px;
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#3563E9;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    transition:.3s;
+
+    box-shadow:0 10px 30px rgba(53,99,233,.25);
+}
+
+.mic-btn:hover{
+
+    transform:scale(1.08);
+}
+
+.mic-btn.recording{
+
+    background:#0f0f0f;
+
+    animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+
+    0%{
+        box-shadow:0 0 0 0 rgba(239,68,68,.5);
+    }
+
+    70%{
+        box-shadow:0 0 0 18px rgba(239,68,68,0);
+    }
+
+    100%{
+        box-shadow:0 0 0 0 rgba(239,68,68,0);
+    }
+}
