@@ -39,7 +39,7 @@ export default function Chat({ setSidebarOpen }) {
       try {
 
          const response = await axios.post(
-            "http://localhost:5000/chat",
+            "https://icanspe-backend.onrender.com/chat",
             {
                message: userMessage,
             }
@@ -129,7 +129,7 @@ export default function Chat({ setSidebarOpen }) {
             try {
 
                const response = await axios.post(
-                  "http://localhost:5000/voice",
+                  "https://icanspe-backend.onrender.com/voice",
                   formData,
                   {
                      headers: {
