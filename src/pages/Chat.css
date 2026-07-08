@@ -300,11 +300,15 @@ body,
     margin: 0 auto;
 
     box-sizing: border-box;
+    position: sticky;
+    bottom: 0;
+    background: white;
 }
 
 .chat-input{
     flex: 1;
     min-width: 0;
+    font-size: 16px;
 }
 
 .mic-btn{

@@ -73,17 +73,22 @@ export default function Chat({ setSidebarOpen }) {
    };
 
 
- const sendMessage = async () => {
+   const sendMessage = async () => {
 
-   if (!input.trim()) return;
+      if (!input.trim()) return;
 
-   const userMessage = input;
+      const userMessage = input;
 
-   setInput("");
+      setInput("");
 
-   await sendToAI(userMessage);
+      // Keyboard close
+      if (document.activeElement) {
+         document.activeElement.blur();
+      }
 
-};
+      await sendToAI(userMessage);
+
+   };
 
    const startRecording = async () => {
       console.log("Start Recording Clicked");
@@ -250,8 +255,8 @@ export default function Chat({ setSidebarOpen }) {
 
 
          </div>
-         
-             
+
+
          <div className="input-section">
             <input
                ref={inputRef}
@@ -260,7 +265,9 @@ export default function Chat({ setSidebarOpen }) {
                placeholder="Type Hindi here..."
                value={input}
                onChange={(e) => setInput(e.target.value)}
-               autoFocus
+               onBlur={() => {
+                  window.scrollTo(0, 0);
+               }}
             />
             <VoiceRecorder
                recording={recording}
@@ -272,7 +279,7 @@ export default function Chat({ setSidebarOpen }) {
                Send
             </button>
          </div>
-         
+
       </div>
    );
 }
