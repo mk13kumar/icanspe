@@ -253,7 +253,8 @@ export default function Chat({ setSidebarOpen }) {
 
 
          </div>
-
+         
+             
          <div className="input-section">
             <input
                ref={inputRef}
@@ -274,6 +275,7 @@ export default function Chat({ setSidebarOpen }) {
                Send
             </button>
          </div>
+         
       </div>
    );
 }

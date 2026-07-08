@@ -18,7 +18,8 @@ export default function VoiceRecorder({
       }
 }}
     >
-      <FaMicrophone />
+      {recording ? "Stop" : <FaMicrophone />}
+      {/* <FaMicrophone /> */}
     </button>
   );
 }

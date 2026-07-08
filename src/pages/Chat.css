@@ -221,23 +221,22 @@ body,
 .chat-container{
     width:100%;
     height:100dvh;
-    padding:10px;
     display:flex;
     flex-direction:column;
+    padding:10px;
     overflow:hidden;
 }
 
 .chat-title{
     font-size:22px;
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 
 .chat-box{
     flex:1;
     width:100%;
-    height:auto;
     padding:12px;
-    margin-bottom:95px;
+    margin-bottom:85px;
     overflow-y:auto;
     overflow-x:hidden;
     border-radius:14px;
@@ -255,70 +254,69 @@ body,
 
 .message-card{
     width:100%;
-    padding:10px;
     border-left:none;
+    padding:10px;
     margin-bottom:10px;
 }
 
 .message-card p{
     font-size:14px;
-    word-break:break-word;
     line-height:1.5;
+    word-break:break-word;
 }
 
+/* ===== INPUT BAR ===== */
+ .input-div-section{
+    color:#777;
+    font-size:14px; 
+
+ }
+
 .input-section{
+    position: fixed;
 
-    position:fixed;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
 
-    left:10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
-    right:10px;
+    gap: 8px;
 
-    bottom:10px;
+    padding: 8px;
 
-    display:flex;
+    background: #fff;
 
-    align-items:center;
+    border-radius: 16px;
 
-    gap:8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
 
-    padding:10px;
+    z-index: 1000;
 
-    background:#fff;
+    width: calc(100% - 20px);
+    max-width: 410px;
+    margin: 0 auto;
 
-    border-radius:18px;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.12);
-
-    z-index:999;
+    box-sizing: border-box;
 }
 
 .chat-input{
+    flex: 1;
+    min-width: 0;
+}
 
-    flex:1;
-
-    height:48px;
-
-    padding:0 15px;
-
-    font-size:14px;
+.mic-btn{
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
 }
 
 .send-btn{
-
-    min-width:60px;
-
-    height:48px;
-
-    padding:0 16px;
-
-    border-radius:12px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
+    width: 60px;
+    height: 42px;
+    flex-shrink: 0;
 }
 
 .typing-container{
