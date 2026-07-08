@@ -7,19 +7,18 @@
     left:0;
 
     background:#ffffff;
-
     border-right:1px solid #ececec;
-
-    padding:22px;
 
     display:flex;
     flex-direction:column;
 
-    transition:.3s ease;
+    padding:22px;
 
-    box-shadow:4px 0 25px rgba(0,0,0,.05);
+    box-shadow:4px 0 20px rgba(0,0,0,.05);
 
-    z-index:999;
+    transition:.35s ease;
+
+    z-index:1200;
 }
 
 /* ========================= */
@@ -27,63 +26,40 @@
 /* ========================= */
 
 .logo{
-
     display:flex;
     align-items:center;
-
-    gap:15px;
-
+    gap:14px;
     margin-bottom:40px;
 }
 
 .logo-circle{
-
     width:54px;
     height:54px;
-
-    /* border-radius:16px; */
-
-    /* background:linear-gradient(135deg,#6C63FF,#4F46E5); */
-
-    /* color:#fff; */
 
     display:flex;
     justify-content:center;
     align-items:center;
-
-    font-size:22px;
-    font-weight:700;
-
-    /* box-shadow:0 10px 25px rgba(108,99,255,.25); */
 }
 
 .logo h2{
-
     font-size:22px;
     color:#222;
 }
 
 .logo p{
-
     font-size:13px;
     color:#777;
-
     margin-top:2px;
 }
 
 /* ========================= */
-/* Right Section */
+/* Navigation */
 /* ========================= */
 
 .nav-right{
-
     display:flex;
-    /* align-items:center; */
-
-     flex-direction:column; 
+    flex-direction:column;
     gap:16px;
-
-    flex-wrap:wrap;
 }
 
 /* ========================= */
@@ -95,11 +71,11 @@
     display:flex;
     align-items:center;
 
-    gap:8px;
+    gap:10px;
 
     background:#FFF7E8;
 
-    padding:10px 18px;
+    padding:12px 16px;
 
     border-radius:14px;
 
@@ -107,7 +83,7 @@
 
     color:#444;
 
-    box-shadow:0 5px 15px rgba(0,0,0,.05);
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
 }
 
 .fire{
@@ -123,8 +99,8 @@
 
 .icon{
 
-    width:44px;
-    height:44px;
+    width:46px;
+    height:46px;
 
     display:flex;
     justify-content:center;
@@ -140,19 +116,17 @@
 
     cursor:pointer;
 
-    transition:.25s;
+    transition:.3s;
 }
 
 .icon:hover{
 
-    background:#6C63FF;
+    background:#3563E9;
 
-    color:white;
+    color:#fff;
 
     transform:translateY(-2px);
 }
-
-
 
 .profile{
 
@@ -161,73 +135,162 @@
 
     padding:4px;
 
-    background:#F5F7FA;
-
     border-radius:16px;
 
-    color:#6C63FF;
+    background:#F5F7FA;
+
+    color:#3563E9;
 
     cursor:pointer;
 
-    transition:.25s;
+    transition:.3s;
 }
 
 .profile:hover{
 
-    background:#6C63FF;
+    background:#3563E9;
 
-    color:white;
+    color:#fff;
 
     transform:translateY(-2px);
 }
 
-
+/* ========================= */
 /* Tablet */
-@media (max-width: 992px) {
+/* ========================= */
 
-    .sidebar {
-       
-        width: 220px;
-        padding: 20px;
-       height: calc(100vh - 205px);
-    }
+@media(max-width:992px){
+
+.sidebar{
+
+    width:230px;
+
+    padding:18px;
+}
+
+.logo h2{
+
+    font-size:20px;
+}
 
 }
 
-
+/* ========================= */
 /* Mobile */
-@media (max-width:768px){
+/* ========================= */
 
-    .sidebar{
+@media(max-width:768px){
 
-        position:fixed;
+.sidebar{
 
-        top:66px;
-        left:-200px;
+    position:fixed;
 
-        width:210px;
-       height: calc(94vh - 253px);
+    top:0;
 
-        padding:22px;
+    left:-270px;
 
-        background:#fff;
+    width:260px;
 
-        /* border-radius:22px; */
+    height:100dvh;
 
-        box-shadow:0 15px 40px rgba(0,0,0,.15);
+    padding:20px;
 
-        border:1px solid #e5e7eb;
+    background:#fff;
 
-        transition:.35s ease;
+    border-right:1px solid #ececec;
 
-        z-index:999;
-    }
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
 
-    .sidebar.open{
+    transition:left .35s ease;
 
-        left:12px;
+    z-index:1500;
 
-    }
+}
+
+.sidebar.open{
+
+    left:0;
+
+}
+
+.logo{
+
+    margin-top:50px;
+
+    margin-bottom:35px;
+}
+
+.nav-right{
+
+    gap:14px;
+}
+
+.icon{
+
+    width:44px;
+
+    height:44px;
+
+    font-size:18px;
+}
+
+.profile{
+
+    width:44px;
+
+    height:44px;
+}
+
+.streak{
+
+    padding:10px 14px;
+
+    font-size:14px;
+}
+
+}
+
+/* ========================= */
+/* Small Mobile */
+/* ========================= */
+
+@media(max-width:480px){
+
+.sidebar{
+
+    width:240px;
+}
+
+.logo h2{
+
+    font-size:18px;
+}
+
+.logo p{
+
+    font-size:12px;
+}
+
+.icon{
+
+    width:42px;
+
+    height:42px;
+
+    font-size:17px;
+}
+
+.profile{
+
+    width:42px;
+
+    height:42px;
+}
+
+.streak{
+
+    font-size:13px;
+}
 
 }
     
