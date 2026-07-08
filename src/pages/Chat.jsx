@@ -268,6 +268,7 @@ export default function Chat({ setSidebarOpen }) {
                onBlur={() => {
                   window.scrollTo(0, 0);
                }}
+               autoFocus
             />
             <VoiceRecorder
                recording={recording}
