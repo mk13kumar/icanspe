@@ -144,12 +144,12 @@ export default function Chat({ setSidebarOpen }) {
 
                const spokenText = response.data.text;
 
-               // setInput(spokenText);
+               setInput(spokenText);
 
                sendToAI(spokenText);
 
-               // setInput("");
-               // inputRef.current?.focus();
+               setInput("");
+               inputRef.current?.focus();
 
             }
             catch (err) {
