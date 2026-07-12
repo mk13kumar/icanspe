@@ -4,6 +4,7 @@ import axios from "axios";
 import Message from "./Message";
 import Welcome from "./Welcome";
 import VoiceRecorder from "../components/VoiceRecorder";
+import { speak } from "../components/Speak";
 
 export default function Chat({ setSidebarOpen }) {
    const [input, setInput] = useState("");
@@ -49,17 +50,26 @@ export default function Chat({ setSidebarOpen }) {
 
          setLoading(false);
 
+         const reply = response.data.reply;
+
+         const voiceText = reply
+            .replace(/\n/g, " ")
+            .replace(/[^\w\s.,!?']/g, "");
+
          setMessages((prev) => {
 
             const updated = [...prev];
 
-            updated[updated.length - 1].reply =
-               response.data.reply;
+            updated[updated.length - 1].reply = reply;
 
-            return [...updated];
+            return updated;
 
          });
 
+         // 👇 State update ke baad
+         setTimeout(() => {
+            speak(voiceText);
+         }, 100);
          // inputRef.current?.focus();
 
       } catch (err) {
@@ -192,7 +202,19 @@ export default function Chat({ setSidebarOpen }) {
       chatEndRef.current?.scrollIntoView({
          behavior: "smooth",
       });
+
+
    }, [messages, loading]);
+
+   useEffect(() => {
+
+      speechSynthesis.getVoices();
+
+      speechSynthesis.onvoiceschanged = () => {
+         speechSynthesis.getVoices();
+      };
+
+   }, []);
 
 
 
