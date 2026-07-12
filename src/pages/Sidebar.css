@@ -1,0 +1,297 @@
+.sidebar{
+    width:260px;
+    height:100vh;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    background:#ffffff;
+    border-right:1px solid #ececec;
+
+    display:flex;
+    flex-direction:column;
+
+    padding:22px;
+
+    box-shadow:4px 0 20px rgba(0,0,0,.05);
+
+    transition:.35s ease;
+
+    z-index:1200;
+}
+
+/* ========================= */
+/* Logo */
+/* ========================= */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:40px;
+}
+
+.logo-circle{
+    width:54px;
+    height:54px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo h2{
+    font-size:22px;
+    color:#222;
+}
+
+.logo p{
+    font-size:13px;
+    color:#777;
+    margin-top:2px;
+}
+
+/* ========================= */
+/* Navigation */
+/* ========================= */
+
+.nav-right{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+/* ========================= */
+/* Streak */
+/* ========================= */
+
+.streak{
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+
+    background:#FFF7E8;
+
+    padding:12px 16px;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+    color:#444;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+
+.fire{
+
+    color:#FF7A00;
+
+    font-size:18px;
+}
+
+/* ========================= */
+/* Icons */
+/* ========================= */
+
+.icon{
+
+    width:46px;
+    height:46px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#F5F7FA;
+
+    border-radius:14px;
+
+    font-size:20px;
+
+    color:#555;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.icon:hover{
+
+    background:#3563E9;
+
+    color:#fff;
+
+    transform:translateY(-2px);
+}
+
+.profile{
+
+    width:48px;
+    height:48px;
+
+    padding:4px;
+
+    border-radius:16px;
+
+    background:#F5F7FA;
+
+    color:#3563E9;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.profile:hover{
+
+    background:#3563E9;
+
+    color:#fff;
+
+    transform:translateY(-2px);
+}
+
+/* ========================= */
+/* Tablet */
+/* ========================= */
+
+@media(max-width:992px){
+
+.sidebar{
+
+    width:230px;
+
+    padding:18px;
+}
+
+.logo h2{
+
+    font-size:20px;
+}
+
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media(max-width:768px){
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    left:-270px;
+
+    width:260px;
+
+    height:100dvh;
+
+    padding:20px;
+
+    background:#fff;
+
+    border-right:1px solid #ececec;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+    transition:left .35s ease;
+
+    z-index:1500;
+
+}
+
+.sidebar.open{
+
+    left:0;
+
+}
+
+.logo{
+
+    margin-top:50px;
+
+    margin-bottom:35px;
+}
+
+.nav-right{
+
+    gap:14px;
+}
+
+.icon{
+
+    width:44px;
+
+    height:44px;
+
+    font-size:18px;
+}
+
+.profile{
+
+    width:44px;
+
+    height:44px;
+}
+
+.streak{
+
+    padding:10px 14px;
+
+    font-size:14px;
+}
+
+}
+
+/* ========================= */
+/* Small Mobile */
+/* ========================= */
+
+@media(max-width:480px){
+
+.sidebar{
+
+    width:240px;
+}
+
+.logo h2{
+
+    font-size:18px;
+}
+
+.logo p{
+
+    font-size:12px;
+}
+
+.icon{
+
+    width:42px;
+
+    height:42px;
+
+    font-size:17px;
+}
+
+.profile{
+
+    width:42px;
+
+    height:42px;
+}
+
+.streak{
+
+    font-size:13px;
+}
+
+}
+    
+

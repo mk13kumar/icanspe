@@ -1,0 +1,256 @@
+.header{
+    width:100%;
+    height:72px;
+    background:#fff;
+    border-bottom:1px solid #e5e5e5;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 24px;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header-left{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.avatar{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-shrink:0;
+}
+
+.user-info{
+    display:flex;
+    flex-direction:column;
+}
+
+.user-info h2{
+    font-size:19px;
+    color:#222;
+    line-height:1.2;
+}
+
+.user-info p{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    color:#777;
+    font-size:13px;
+}
+
+.online-dot{
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:#22c55e;
+}
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.header-icon{
+    width:40px;
+    height:40px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:12px;
+
+    font-size:20px;
+    color:#555;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+.header-icon:hover{
+    background:#f3f4f6;
+    color:#6C63FF;
+}
+
+.sidebar-icon{
+    width:42px;
+    height:42px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:22px;
+    color:#555;
+
+    border-radius:12px;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+.sidebar-icon:hover{
+    background:#f3f4f6;
+    color:#3563E9;
+}
+
+/* ========================= */
+/* Tablet */
+/* ========================= */
+
+@media (max-width:768px){
+
+    .header{
+        height:68px;
+        padding:0 16px;
+    }
+
+    .avatar{
+        width:44px;
+        height:44px;
+    }
+
+    .user-info h2{
+        font-size:17px;
+    }
+
+    .user-info p{
+        font-size:12px;
+    }
+
+    .header-right{
+        gap:12px;
+    }
+
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media (max-width:480px){
+
+    .header{
+
+        height:64px;
+
+        padding:0 12px;
+
+        position:sticky;
+
+        top:0;
+
+        z-index:1000;
+    }
+
+    .header-left{
+
+        gap:8px;
+
+        min-width:0;
+    }
+
+    .avatar{
+
+        width:38px;
+
+        height:38px;
+    }
+
+    .user-info{
+
+        overflow:hidden;
+    }
+
+    .user-info h2{
+
+        font-size:14px;
+
+        white-space:nowrap;
+
+        overflow:hidden;
+
+        text-overflow:ellipsis;
+    }
+
+    .user-info p{
+
+        font-size:11px;
+    }
+
+    .online-dot{
+
+        width:7px;
+
+        height:7px;
+    }
+
+    .header-right{
+
+        gap:6px;
+    }
+
+    .header-icon{
+
+        width:34px;
+
+        height:34px;
+
+        font-size:17px;
+
+        border-radius:10px;
+    }
+
+    .sidebar-icon{
+
+        width:34px;
+
+        height:34px;
+
+        font-size:18px;
+
+        border-radius:10px;
+    }
+
+}
+
+/* Sidebar */
+
+@media(max-width:768px){
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    left:-270px;
+
+    width:260px;
+
+    height:100vh;
+
+    z-index:1200;
+
+    transition:.3s;
+}
+
+.sidebar.active{
+
+    left:0;
+}
+
+}
